@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araaz - Handcrafted Jewelry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        .luxury-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .nav-item {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item:hover {
+            color: #d4af37;
+        }
+        
+        .nav-item.active {
+            color: #d4af37;
+            border-bottom: 2px solid #d4af37;
+        }
+        
+        .form-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+        }
+        
+        select[multiple] {
+            min-height: 120px;
+        }
+        
+        .luxury-button {
+            background: linear-gradient(45deg, #d4af37, #f4e4bc);
+            transition: all 0.3s ease;
+        }
+        
+        .luxury-button:hover {
+            background: linear-gradient(45deg, #b8941f, #d4af37);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+    </style>
+</head>
+<body class="luxury-gradient min-h-full font-serif">
+    <header class="bg-white/90 backdrop-blur-md shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-800 tracking-wide" style="font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 3px;">ARAAZ</h1>
+                    <p class="text-gray-600 italic text-sm mt-1">Handcrafted with Love</p>
+                </div>
+                
+                <nav>
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="nav-item active text-lg font-medium text-gray-700 pb-2" onclick="showCategory('home')">Home</a></li>
+                        <li><a href="#" class="nav-item text-lg font-medium text-gray-700 pb-2" onclick="showCategory('bracelets')">Bracelets</a></li>
+                        <li><a href="#" class="nav-item text-lg font-medium text-gray-700 pb-2" onclick="showCategory('earrings')">Earrings</a></li>
+                        <li><a href="#" class="nav-item text-lg font-medium text-gray-700 pb-2" onclick="showCategory('necklaces')">Necklaces</a></li>
+                        <li><a href="#" class="nav-item text-lg font-medium text-gray-700 pb-2" onclick="showCategory('combos')">Combos</a></li>
+                        <li><a href="#" class="nav-item text-lg font-medium text-gray-700 pb-2" onclick="showCategory('keychains')">Keychains</a></li>
+                        <li><a href="#" class="nav-item text-lg font-medium text-gray-700 pb-2" onclick="showCategory('order')">Place Order</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Homepage -->
+        <div id="home" class="category-section">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4" style="font-family: 'Playfair Display', serif;">Discover Your Style</h2>
+                <p class="text-lg text-gray-600" style="font-family: 'Poppins', sans-serif;">Explore our curated collections inspired by different themes and vibes</p>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl mb-12">
+                <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Celebrity Inspired Slide -->
+                    <div class="carousel-slide min-w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white p-12 text-center">
+                        <h3 class="text-3xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">✨ Celebrity Inspired</h3>
+                        <p class="text-lg mb-6" style="font-family: 'Poppins', sans-serif;">From Favourite Albums To Songs</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                <img src="./b16.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                <p class="text-sm">Weeknd</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                              <img src="./sour.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+
+                                <p class="text-sm">Olivia Rodrigo</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./billie.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+
+                                <p class="text-sm">Billie Elish</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                               <img src="./swiftie.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+
+                                <p class="text-sm">Taylor Swift</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beach Girly Slide -->
+                    <div class="carousel-slide min-w-full bg-gradient-to-r from-blue-400 to-teal-500 text-white p-12 text-center">
+                        <h3 class="text-3xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">🏖️ Beach Girly</h3>
+                        <p class="text-lg mb-6" style="font-family: 'Poppins', sans-serif;">Breezy, ocean-inspired pieces for summer vibes</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                                               <img src="./b17.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+
+                                <p class="text-sm">Blue Glass Effect Bracelet</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./b20.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Starfish Bracelet</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./b22.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Seashell Bracelet</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./bracelet2.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Colorful Seashell Bracelet</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Anime Inspired Slide -->
+                    <div class="carousel-slide min-w-full bg-gradient-to-r from-pink-500 to-orange-400 text-white p-12 text-center">
+                        <h3 class="text-3xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">🌸 Anime Inspired</h3>
+                        <p class="text-lg mb-6" style="font-family: 'Poppins', sans-serif;">Kawaii and magical pieces for anime lovers</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./ab3.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Gojo Bracelet</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./ab2.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Inumaki Bracelet</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./ab5.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Itadori Bracelet</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./animeb1.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Muichiro Bracelet</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vintage Boho Slide -->
+                   <!-- <div class="carousel-slide min-w-full bg-gradient-to-r from-amber-600 to-red-500 text-white p-12 text-center">
+                        <h3 class="text-3xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">🍂 Vintage Boho</h3>
+                        <p class="text-lg mb-6" style="font-family: 'Poppins', sans-serif;">Earthy, free-spirited pieces with vintage charm</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                <div class="w-full h-24 bg-white/30 rounded mb-2"></div>
+                                <p class="text-sm">Feather Earrings</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                <div class="w-full h-24 bg-white/30 rounded mb-2"></div>
+                                <p class="text-sm">Beaded Bracelet</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                <div class="w-full h-24 bg-white/30 rounded mb-2"></div>
+                                <p class="text-sm">Turquoise Necklace</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                <div class="w-full h-24 bg-white/30 rounded mb-2"></div>
+                                <p class="text-sm">Boho Bundle</p>
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <!-- New Arrivals Slide -->
+                    <div class="carousel-slide min-w-full bg-gradient-to-r from-emerald-500 to-cyan-600 text-white p-12 text-center">
+                        <h3 class="text-3xl font-bold mb-4" style="font-family: 'Playfair Display', serif;">✨ New Arrivals</h3>
+                        <p class="text-lg mb-6" style="font-family: 'Poppins', sans-serif;">Fresh designs just added to our collection</p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./b21.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Smiley Bracelet</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./b22.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Seashell Bracelet</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./b19.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Colored Bracelet</p>
+                            </div>
+                            <div class="bg-white/20 rounded-lg p-4 backdrop-blur-sm">
+                                                                <img src="./e3.jpg" alt="starboy Bracelet" class="w-full h-24 object-cover rounded mb-2" onerror="this.src=''; this.alt='Image failed to load';">
+                                
+                                <p class="text-sm">Starfish earring</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Navigation -->
+                <button onclick="previousSlide()" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all">
+                    ←
+                </button>
+                <button onclick="nextSlide()" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full backdrop-blur-sm transition-all">
+                    →
+                </button>
+
+                <!-- Carousel Dots -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <button onclick="goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all"></button>
+                    <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all"></button>
+                    <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all"></button>
+                    <button onclick="goToSlide(3)" class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all"></button>
+                   <!--<button onclick="goToSlide(4)" class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white/80 transition-all"></button>-->
+                </div>
+            </div>
+
+            <!-- Quick Categories -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+                <div class="bg-white/80 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer" onclick="showCategory('bracelets')">
+                    <div class="text-4xl mb-3">💎</div>
+                    <h3 class="font-semibold text-gray-800" style="font-family: 'Poppins', sans-serif;">Bracelets</h3>
+                    <p class="text-sm text-gray-600">20 Designs</p>
+                </div>
+                <div class="bg-white/80 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer" onclick="showCategory('earrings')">
+                    <div class="text-4xl mb-3">✨</div>
+                    <h3 class="font-semibold text-gray-800" style="font-family: 'Poppins', sans-serif;">Earrings</h3>
+                    <p class="text-sm text-gray-600">10 Designs</p>
+                </div>
+                <div class="bg-white/80 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer" onclick="showCategory('necklaces')">
+                    <div class="text-4xl mb-3">🌟</div>
+                    <h3 class="font-semibold text-gray-800" style="font-family: 'Poppins', sans-serif;">Necklaces</h3>
+                    <p class="text-sm text-gray-600">5 Designs</p>
+                </div>
+                <div class="bg-white/80 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer" onclick="showCategory('combos')">
+                    <div class="text-4xl mb-3">💫</div>
+                    <h3 class="font-semibold text-gray-800" style="font-family: 'Poppins', sans-serif;">Combos</h3>
+                    <p class="text-sm text-gray-600">10 Sets</p>
+                </div>
+                <div class="bg-white/80 rounded-xl p-6 text-center hover:shadow-lg transition-all cursor-pointer" onclick="showCategory('keychains')">
+                    <div class="text-4xl mb-3">🔑</div>
+                    <h3 class="font-semibold text-gray-800" style="font-family: 'Poppins', sans-serif;">Keychains</h3>
+                    <p class="text-sm text-gray-600">8 Designs</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Categories -->
+        <div id="bracelets" class="category-section hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Bracelets Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Bracelets 1-20 -->
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./bracelet1.jpg" alt="Bracelet 1" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 1</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b11.jpg" alt="Bracelet 2" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 2</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./bracelet2.jpg" alt="Bracelet 3" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 3</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./bracelet6.jpg" alt="Bracelet 4" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 4</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./bracelet3.jpg" alt="Bracelet 5" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 5</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./bracelet4.jpg" alt="Bracelet 6" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 6</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./bracelet7.jpg" alt="Bracelet 7" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 7</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b12.jpg" alt="Bracelet 8" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 8</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./bracelet10.jpg" alt="Bracelet 9" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 9</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./bracelet8.jpg" alt="Bracelet 10" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 10</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./bracelet9.jpg" alt="Bracelet 11" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 11</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b22.jpg" alt="Bracelet 12" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 12</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b13.jpg" alt="Bracelet 13" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 13</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b14.jpg" alt="Bracelet 14" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 14</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b15.jpg" alt="Bracelet 15" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 15</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b16.jpg" alt="Bracelet 16" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 16</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b17.jpg" alt="Bracelet 17" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 17</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b21.jpg" alt="Bracelet 18" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 18</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b19.jpg" alt="Bracelet 19" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 19</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./b20.jpg" alt="Bracelet 20" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Bracelet 20</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹200</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="earrings" class="category-section hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Earrings Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Earrings 1-10 -->
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./earring1.jpg" alt="Earring 1" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Earring 1</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹50</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./earring2.jpg" alt="Earring 2" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Earring 2</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹50</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./e3.jpg" alt="Earring 3" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Earring 3</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹50</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./e4.jpg" alt="Earring 4" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Earring 4</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹50</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./e5.jpg" alt="Earring 5" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Earring 5</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹50</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./e6.jpg" alt="Earring 6" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Earring 6</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹50</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./e7.jpg" alt="Earring 7" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Earring 7</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹50</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./e9.jpg" alt="Earring 8" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Earring 8</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹50</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./e8.jpg" alt="Earring 9" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Earring 9</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹50</p>
+                </div>
+                <!--<div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Earring 10" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Earring 10</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹1,499</p>
+                </div>-->
+            </div>
+        </div>
+
+        <div id="necklaces" class="category-section hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Necklaces Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Necklaces 1-5 -->
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./n1.jpg" alt="Necklace 1" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Necklace 1</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹500</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./n3.jpg" alt="Necklace 2" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Necklace 2</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹700</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./n2.jpg" alt="Necklace 3" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Necklace 3</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹500</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./n4.jpg" alt="Necklace 4" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Necklace 4</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹500</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./n5.jpg" alt="Necklace 5" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Necklace 5</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹2,199</p>
+                </div>
+                 <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./n6.jpg" alt="Necklace 6" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Necklace 6</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹500</p>
+                </div>
+                 <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./n7.jpg" alt="Necklace 7" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Necklace 7</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹500</p>
+                </div>
+                 <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./n8.jpg" alt="Necklace 8" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Necklace 8</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹500</p>
+                </div>
+                 <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./n9.jpg" alt="Necklace 9" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Necklace 9</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹500</p>
+                </div>
+                 <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="./n10.jpg" alt="Necklace 10" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Necklace 10</h3>
+                   <p class="text-yellow-600 font-bold text-lg">₹500</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="combos" class="category-section hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Combo Sets</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Combos 1-10 -->
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Combo 1" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Combo 1</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹2,799</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Combo 2" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Combo 2</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹3,499</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Combo 3" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Combo 3</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹2,299</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Combo 4" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Combo 4</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹4,199</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Combo 5" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Combo 5</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹2,999</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Combo 6" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Combo 6</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹3,799</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Combo 7" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Combo 7</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹2,599</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Combo 8" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Combo 8</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹4,599</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Combo 9" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Combo 9</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹3,299</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Combo 10" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Combo 10</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹5,199</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="keychains" class="category-section hidden">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Keychains Collection</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Keychains 1-8 -->
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Keychain 1" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Keychain 1</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹299</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Keychain 2" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Keychain 2</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹399</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Keychain 3" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Keychain 3</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹249</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Keychain 4" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Keychain 4</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹449</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Keychain 5" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Keychain 5</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹349</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Keychain 6" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Keychain 6</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹499</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Keychain 7" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Keychain 7</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹199</p>
+                </div>
+                <div class="product-card bg-white/80 rounded-lg shadow-md p-6 text-center">
+                    <img src="" alt="Keychain 8" class="w-full h-48 object-cover rounded-md mb-4 bg-gray-100">
+                    <h3 class="text-lg font-semibold text-gray-800">Keychain 8</h3>
+                    <p class="text-yellow-600 font-bold text-lg">₹549</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Form -->
+        <div id="order" class="category-section hidden">
+            <div class="form-section max-w-4xl mx-auto rounded-2xl shadow-2xl p-8">
+                <form
+            onsubmit="return validateForm()"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            id="form"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="ea6c0d42-6bfd-4f6c-a097-7e0155751527"
+            />
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Place Your Order</h2>
+               
+                    <!-- Customer Information -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="customerName" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="customerName" name="customerName" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="customerEmail" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="customerEmail" name="customerEmail" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="customerPhone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="customerPhone" name="customerPhone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="customerAddress" class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+                            <textarea id="customerAddress" name="customerAddress" required rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Product Selection -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-3">Select Bracelets</label>
+                            <div class="max-h-48 overflow-y-auto border border-gray-300 rounded-lg p-4 bg-gray-50">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet1" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 1 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet2" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 2 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet3" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 3 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet4" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 4 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet5" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 5 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet6" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 6 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet7" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 7 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet8" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 8 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet9" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 9 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet10" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 10 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet11" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 11 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet12" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 12 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet13" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 13 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet14" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 14 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet15" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 15 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet16" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 16 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet17" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 17 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet18" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 18 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet19" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 19 (₹200)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="braceletSelection" value="bracelet20" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Bracelet 20 (₹200)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-3">Select Earrings</label>
+                            <div class="max-h-48 overflow-y-auto border border-gray-300 rounded-lg p-4 bg-gray-50">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="earringSelection" value="earring1" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Earring 1 (₹50)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="earringSelection" value="earring2" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Earring 2 (₹50)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="earringSelection" value="earring3" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Earring 3 (₹50)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="earringSelection" value="earring4" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Earring 4 (₹50)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="earringSelection" value="earring5" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Earring 5 (₹50)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="earringSelection" value="earring6" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Earring 6 (₹50)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="earringSelection" value="earring7" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Earring 7 (₹50)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="earringSelection" value="earring8" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Earring 8 (₹50)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="earringSelection" value="earring9" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Earring 9 (₹50)</span>
+                                    </label>
+                                   <!--- <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="earringSelection" value="earring10" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Earring 10 (₹1,499)</span>
+                                    </label>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-3">Select Necklaces</label>
+                            <div class="max-h-48 overflow-y-auto border border-gray-300 rounded-lg p-4 bg-gray-50">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="necklaceSelection" value="necklace1" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Necklace 1 (₹500)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="necklaceSelection" value="necklace2" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Necklace 2 (₹700)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="necklaceSelection" value="necklace3" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Necklace 3 (₹500)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="necklaceSelection" value="necklace4" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Necklace 4 (₹500)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="necklaceSelection" value="necklace5" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Necklace 5 (₹500)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+    <input type="checkbox" name="necklaceSelection" value="necklace6" class="text-yellow-500 focus:ring-yellow-500">
+    <span class="text-sm">Necklace 6 (₹500)</span>
+</label>
+
+<label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+    <input type="checkbox" name="necklaceSelection" value="necklace7" class="text-yellow-500 focus:ring-yellow-500">
+    <span class="text-sm">Necklace 7 (₹500)</span>
+</label>
+
+<label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+    <input type="checkbox" name="necklaceSelection" value="necklace8" class="text-yellow-500 focus:ring-yellow-500">
+    <span class="text-sm">Necklace 8 (₹500)</span>
+</label>
+
+<label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+    <input type="checkbox" name="necklaceSelection" value="necklace9" class="text-yellow-500 focus:ring-yellow-500">
+    <span class="text-sm">Necklace 9 (₹500)</span>
+</label>
+
+<label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+    <input type="checkbox" name="necklaceSelection" value="necklace10" class="text-yellow-500 focus:ring-yellow-500">
+    <span class="text-sm">Necklace 10 (₹500)</span>
+</label>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-3">Select Keychains</label>
+                            <div class="max-h-48 overflow-y-auto border border-gray-300 rounded-lg p-4 bg-gray-50">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="keychainSelection" value="keychain1" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Keychain 1 (₹299)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="keychainSelection" value="keychain2" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Keychain 2 (₹399)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="keychainSelection" value="keychain3" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Keychain 3 (₹249)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="keychainSelection" value="keychain4" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Keychain 4 (₹449)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="keychainSelection" value="keychain5" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Keychain 5 (₹349)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="keychainSelection" value="keychain6" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Keychain 6 (₹499)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="keychainSelection" value="keychain7" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Keychain 7 (₹199)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="keychainSelection" value="keychain8" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Keychain 8 (₹549)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-3">Select Combos</label>
+                            <div class="max-h-48 overflow-y-auto border border-gray-300 rounded-lg p-4 bg-gray-50">
+                                <div class="grid grid-cols-2 gap-2">
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="comboSelection" value="combo1" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Combo 1 (₹2,799)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="comboSelection" value="combo2" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Combo 2 (₹3,499)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="comboSelection" value="combo3" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Combo 3 (₹2,299)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="comboSelection" value="combo4" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Combo 4 (₹4,199)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="comboSelection" value="combo5" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Combo 5 (₹2,999)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="comboSelection" value="combo6" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Combo 6 (₹3,799)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="comboSelection" value="combo7" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Combo 7 (₹2,599)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="comboSelection" value="combo8" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Combo 8 (₹4,599)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="comboSelection" value="combo9" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Combo 9 (₹3,299)</span>
+                                    </label>
+                                    <label class="flex items-center space-x-2 cursor-pointer hover:bg-white p-2 rounded">
+                                        <input type="checkbox" name="comboSelection" value="combo10" class="text-yellow-500 focus:ring-yellow-500">
+                                        <span class="text-sm">Combo 10 (₹5,199)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                        <div>
+                        <label for="customizationComments" class="block text-sm font-medium text-gray-700 mb-2">Customization Requests</label>
+                        <textarea id="customizationComments" name="customizationComments" rows="4" placeholder="Tell us about any customizations you'd like! For example: engrave a name, specific colors, size adjustments, special packaging, or any other personal touches..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent resize-vertical"></textarea>
+                        <p class="text-xs text-gray-500 mt-1">💡 Popular customizations: Name engraving, initials, birthstones, custom colors, gift wrapping</p>
+                         </div>
+
+                    <div class="text-center pt-6">
+                        <button type="submit" class="luxury-button text-white font-bold py-4 px-12 rounded-lg text-lg">
+                            Purchase Order
+                        </button>
+                    </div>
+                </form>
+
+                <div id="orderConfirmation" class="hidden mt-8 p-6 bg-green-50 border border-green-200 rounded-lg">
+                    <h3 class="text-lg font-semibold text-green-800 mb-4">Order Submitted Successfully!</h3>
+                    <p class="text-green-700">Thank you for your order. We'll contact you soon to confirm the details and arrange delivery.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Brand Section -->
+                <div>
+                    <h3 class="text-xl font-bold mb-3" style="font-family: 'Playfair Display', serif; letter-spacing: 2px;">ARAAZ</h3>
+                    <p class="text-gray-300 text-sm mb-3" style="font-family: 'Poppins', sans-serif;">Handcrafted jewelry made with love and attention to detail.</p>
+                    <div class="flex space-x-3">
+                       <!--- <a href="#" class="text-gray-300 hover:text-yellow-400 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-yellow-400 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>-->
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-3" style="font-family: 'Poppins', sans-serif;">Quick Links</h4>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" onclick="showCategory('home')" class="text-gray-300 hover:text-yellow-400 transition-colors">Home</a></li>
+                        <li><a href="#" onclick="showCategory('bracelets')" class="text-gray-300 hover:text-yellow-400 transition-colors">Bracelets</a></li>
+                        <li><a href="#" onclick="showCategory('earrings')" class="text-gray-300 hover:text-yellow-400 transition-colors">Earrings</a></li>
+                        <li><a href="#" onclick="showCategory('necklaces')" class="text-gray-300 hover:text-yellow-400 transition-colors">Necklaces</a></li>
+                        <li><a href="#" onclick="showCategory('combos')" class="text-gray-300 hover:text-yellow-400 transition-colors">Combos</a></li>
+                        <li><a href="#" onclick="showCategory('keychains')" class="text-gray-300 hover:text-yellow-400 transition-colors">Keychains</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-3" style="font-family: 'Poppins', sans-serif;">Contact</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <span class="text-gray-300">nimrawani04@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <span class="text-gray-300">+91 123456789</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p class="text-gray-400" style="font-family: 'Poppins', sans-serif;">
+                    Developed By <a href="https://github.com/nimrawani04">Nimra Wani</a>
+                    © 2025 Araaz. Handcrafted with ❤️
+                </p>
+                <div class="flex space-x-4 mt-2 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400 transition-colors">Shipping</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 5;
+
+        function showCategory(category) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.category-section');
+            sections.forEach(section => section.classList.add('hidden'));
+            
+            // Show selected section
+            document.getElementById(category).classList.remove('hidden');
+            
+            // Update navigation
+            const navItems = document.querySelectorAll('.nav-item');
+            navItems.forEach(item => item.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const carousel = document.getElementById('carousel');
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            const dots = document.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-white/80');
+                } else {
+                    dot.classList.remove('bg-white/80');
+                    dot.classList.add('bg-white/50');
+                }
+            });
+        }
+
+        // Auto-advance carousel
+        setInterval(nextSlide, 5000);
+
+        // Handle form submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const orderData = {};
+            
+            // Process form data
+            for (let [key, value] of formData.entries()) {
+                if (orderData[key]) {
+                    if (Array.isArray(orderData[key])) {
+                        orderData[key].push(value);
+                    } else {
+                        orderData[key] = [orderData[key], value];
+                    }
+                } else {
+                    orderData[key] = value;
+                }
+            }
+            
+            // Get selected products from checkboxes
+            const bracelets = Array.from(document.querySelectorAll('input[name="braceletSelection"]:checked')).map(input => input.value);
+            const earrings = Array.from(document.querySelectorAll('input[name="earringSelection"]:checked')).map(input => input.value);
+            const necklaces = Array.from(document.querySelectorAll('input[name="necklaceSelection"]:checked')).map(input => input.value);
+            const keychains = Array.from(document.querySelectorAll('input[name="keychainSelection"]:checked')).map(input => input.value);
+            const combos = Array.from(document.querySelectorAll('input[name="comboSelection"]:checked')).map(input => input.value);
+            
+            // Show confirmation
+            document.getElementById('orderConfirmation').classList.remove('hidden');
+            document.getElementById('orderForm').style.display = 'none';
+            
+            // Scroll to confirmation
+            document.getElementById('orderConfirmation').scrollIntoView({ behavior: 'smooth' });
+            
+            console.log('Order submitted:', {
+                customer: {
+                    name: orderData.customerName,
+                    email: orderData.customerEmail,
+                    phone: orderData.customerPhone,
+                    address: orderData.customerAddress
+                },
+                products: {
+                    bracelets: bracelets,
+                    earrings: earrings,
+                    necklaces: necklaces,
+                    keychains: keychains,
+                    combos: combos
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'990ed79d9716087b',t:'MTc2MDg2MTg4MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
